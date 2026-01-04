@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Ramratan Padhy",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 10.2, "left": -10.2, "attrs": {} },
+    { "type": "wokwi-rgb-led", "id": "rgb1", "top": 119.2, "left": 135.5, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 90.35,
+      "left": 105.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 109.55,
+      "left": 76.8,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "rgb1:COM", "uno:5V", "green", [ "v-0.4", "h-9.5" ] ],
+    [ "rgb1:R", "r1:2", "green", [ "v-96", "h-9.6" ] ],
+    [ "r1:1", "uno:9", "green", [ "v-76.8", "h76.8" ] ],
+    [ "rgb1:B", "r2:2", "green", [ "v-86.4", "h-36.8" ] ],
+    [ "r2:1", "uno:8", "green", [ "v-86.4", "h86.4" ] ]
+  ],
+  "dependencies": {}
+}
